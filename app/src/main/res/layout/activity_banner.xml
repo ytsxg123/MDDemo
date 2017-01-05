@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_banner"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    tools:context="com.sxg.design.BannerActivity">
+    <cn.bingoogolapple.bgabanner.BGABanner
+        android:id="@+id/banner"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        app:banner_indicatorGravity="center_horizontal"
+        app:banner_pointAutoPlayAble="true"
+        app:banner_pointAutoPlayInterval="5000"
+        app:banner_pageChangeDuration="1000"
+        app:banner_transitionEffect="zoom"
+        app:banner_pointContainerBackground="@android:color/transparent"
+        app:banner_pointDrawable="@drawable/sel_banner_icon"
+        />
+</LinearLayout>
