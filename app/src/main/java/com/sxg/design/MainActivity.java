@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
+    /**
+     * 分支添加注释
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
