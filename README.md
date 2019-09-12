@@ -6,7 +6,6 @@
 
 ## 添加okHttp、greendao的支持
 
-    ```
     dependencies{
         ...
         //注意：使用 `3.12.0` 以下的版本，否在不兼容`5.0`以下的设备
@@ -14,7 +13,6 @@
         //grendao
         implementation 'org.greenrobot:greendao:3.2.2'
     }
-    ```
     
 
 ## 添加Java 8的支持
