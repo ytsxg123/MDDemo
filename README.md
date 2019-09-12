@@ -1,9 +1,10 @@
-SDK导入
-#SDK导入
- ```implementation files('libs/meta-1.4.1.aar')```
-工程配置
+# SDK导入
 
-添加okHttp、greendao的支持
+    implementation files('libs/meta-1.4.1.aar')
+
+# 工程配置
+
+## 添加okHttp、greendao的支持
 
     dependencies{
         ...
@@ -14,7 +15,7 @@ SDK导入
     }
     
 
-添加Java 8的支持
+## 添加Java 8的支持
 
     android{
         ...
@@ -25,7 +26,7 @@ SDK导入
         ...
     }
 
-AndroidManifest.xml配置appId和内容提供者
+## AndroidManifest.xml配置appId和内容提供者
 
     <?xml version="1.0" encoding="utf-8"?>
     <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -57,15 +58,15 @@ file_privider配置
             path="MetaCache/"/>
     </paths>
 
-SDK常用Api调用
+# SDK常用Api调用
 
-初始化SDK
+## 初始化SDK
 
     MetaADClient.init(Context context,boolean debug)
     //注册回调接口，此接口不注册，会有部分回调回调不到
     MetaADClient.getInstance().registerRewardVideoCallback(MetaRewardVideoAdListener);
 
-视频回调接口
+## 视频回调接口
 
     public interface MetaRewardVideoAdListener {
      
@@ -127,16 +128,16 @@ SDK常用Api调用
          */
         void onAdCachePollCountChange(int currentCount, @ModeType int type);
 
-设置是否静音播放
+## 设置是否静音播放
 
     /**
     * @return MetaVideoVolumeMode.SILENCE 静音  MetaVideoVolumeMode.NORMAL 正常播放
     */
     MetaVideoADConfig.getVideoADConfig.mRewardVoiceMode= ()-> return MetaVideoVolumeMode.SILENCE;
 
-广告接口相关操作
+## 广告接口相关操作
 
-是否有激励视频广告
+### 是否有激励视频广告
 
     /**
      * 是否加载成功广告
@@ -145,7 +146,7 @@ SDK常用Api调用
     MetaADClient.getInstance().getFillAdManager().isLoadRewardAd();
     
 
-填充激励视频广告
+### 填充激励视频广告
 
     AdRequest request=new AdRequest.Builder()
                     .unitId("代码位：unitId")
@@ -153,9 +154,9 @@ SDK常用Api调用
     MetaADClient.getInstance().getFillAdManager().loadRewardAd(request);
     
 
-页面跳转
+### 页面跳转
 
-跳转到激励视频页面
+#### 跳转到激励视频页面
 
     //MetaRewardVideoAdListener全局要使用同一个接口对象
     MetaADClient.getRouteManager.startRewardVideo(Activity activity,MetaRewardVideoAdListener listener);
